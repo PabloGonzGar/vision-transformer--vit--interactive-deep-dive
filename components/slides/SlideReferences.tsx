@@ -21,7 +21,8 @@ const SlideReferences: React.FC<Props> = ({ slide }) => {
           {REFERENCES.map((ref, i) => (
             <a 
               key={i}
-              href="#"
+              href={ref.src}
+              target='_blank'
               className="group flex flex-col sm:flex-row gap-6 bg-surface-dark border border-border-dark hover:border-primary/40 p-6 rounded-2xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
             >
               <div className="size-14 rounded-2xl bg-white/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shrink-0">

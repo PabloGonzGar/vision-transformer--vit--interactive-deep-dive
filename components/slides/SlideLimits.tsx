@@ -8,10 +8,10 @@ interface Props {
 
 const SlideLimits: React.FC<Props> = ({ slide }) => {
   const items = [
-    { icon: 'crop_free', title: 'Dependencia Local', desc: 'El campo receptivo limitado impide capturar relaciones globales lejanas en la imagen desde las primeras capas.' },
-    { icon: 'compress', title: 'Degradación de Datos', desc: 'La información espacial fina se pierde progresivamente a través de operaciones de pooling y convolución repetida.' },
-    { icon: 'account_tree', title: 'Jerarquía Rígida', desc: 'La estructura fija asume que la localidad es lo más importante, dificultando la adaptación a relaciones no espaciales.' },
-    { icon: 'database', title: 'Inflexibilidad a Escala', desc: 'El rendimiento de las CNN tiende a saturarse más rápido con datasets masivos comparado con los Transformers.' },
+    { icon: 'crop_free', title: 'Conectividad Global', desc: 'Cualquier par de puntos de la imagen interactúa directamente, sin importar la distancia, eliminando el cuello de botella de las CNNs.' },
+    { icon: 'account_tree', title: 'Sin Jerarquía Fija', desc: ' Desde el primer bloque, el modelo puede integrar información de toda la imagen, a diferencia del crecimiento lineal o logarítmico de las redes convolucionales.' },
+    { icon: 'compress', title: 'Escalabilidad', desc: 'Escalabilidad: Aunque el ViT prescinde de sesgos inductivos (como la vecindad física), compensa esta libertad con una capacidad superior de aprendizaje en datasets masivos, logrando una representación más rica y flexible.' },
+
   ];
 
   return (
@@ -47,7 +47,7 @@ const SlideLimits: React.FC<Props> = ({ slide }) => {
           <div className="absolute -inset-4 bg-primary/10 blur-3xl rounded-full opacity-50 group-hover:opacity-80 transition-opacity"></div>
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-border-dark shadow-2xl">
             <img 
-              src="https://picsum.photos/seed/cnn/800/1000" 
+              src="https://images.unsplash.com/photo-1664854953181-b12e6dda8b7c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmVkZXMlMjBjb252b2x1Y2lvbmFsZXN8ZW58MHx8MHx8fDI%3D" 
               alt="Conceptual Tech" 
               className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-[2000ms]"
             />

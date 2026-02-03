@@ -3,7 +3,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { SLIDES } from './constants';
 import { SlideType } from './types';
 import Header from './components/Header';
-import Footer from './components/Footer';
 import SlideCover from './components/slides/SlideCover';
 import SlideLimits from './components/slides/SlideLimits';
 import SlideArchitecture from './components/slides/SlideArchitecture';
@@ -78,8 +77,6 @@ const App: React.FC = () => {
           </button>
         </div>
       </main>
-
-      <Footer />
     </div>
   );
 };

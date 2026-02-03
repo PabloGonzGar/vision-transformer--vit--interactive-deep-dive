@@ -15,11 +15,12 @@ const Header: React.FC<HeaderProps> = ({ currentSlideIndex, totalSlides, onHome 
           <div className="size-8 flex items-center justify-center text-primary transition-transform group-hover:scale-110">
             <span className="material-symbols-outlined text-3xl">view_in_ar</span>
           </div>
-          <h2 className="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] font-display">ViT Deep Dive</h2>
+          <h2 className="text-[#111318] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] font-display">Grupo 6 | Vision Transformers(ViT)</h2>
         </div>
         <div className="hidden lg:flex flex-1 justify-end gap-8">
           <nav className="flex items-center gap-9">
             <a className="text-[#64748b] dark:text-gray-400 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors" href="#">Intro</a>
+            <a className="text-[#64748b] dark:text-gray-400 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors" href="#">Analisis</a>
             <a className="text-[#64748b] dark:text-gray-400 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors" href="#">Arquitectura</a>
             <a className="text-[#64748b] dark:text-gray-400 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors" href="#">Rendimiento</a>
             <a className="text-[#64748b] dark:text-gray-400 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors" href="#">Ética</a>

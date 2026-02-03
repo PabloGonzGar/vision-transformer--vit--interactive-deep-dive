@@ -24,4 +24,5 @@ export interface ReferenceItem {
   author: string;
   tag?: string;
   icon: string;
+  src:string;
 }

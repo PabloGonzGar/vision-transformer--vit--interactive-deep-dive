@@ -68,7 +68,7 @@ const SlideSelfAttention: React.FC<Props> = ({ slide }) => {
               <span className="material-symbols-outlined text-primary">grid_on</span>
             </div>
             <div className="relative flex-1 min-h-[400px] bg-black">
-              <img src="https://picsum.photos/seed/attention/600/800" className="w-full h-full object-cover opacity-80" alt="Heatmap" />
+              <img src="https://images.unsplash.com/photo-1676302440263-c6b4cea29567?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1hdGhzfGVufDB8fDB8fHwy" className="w-full h-full object-cover opacity-80" alt="Heatmap" />
               <div className="absolute bottom-6 left-6 right-6 bg-black/80 backdrop-blur-md p-5 rounded-2xl border border-white/10 shadow-2xl">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-4 h-4 rounded-full bg-blue-500 shadow-lg shadow-blue-500/40"></div>

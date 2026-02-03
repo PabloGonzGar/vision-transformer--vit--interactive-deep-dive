@@ -8,10 +8,12 @@ interface Props {
 
 const SlideArchitecture: React.FC<Props> = ({ slide }) => {
   const steps = [
-    { num: '01', title: 'Tokenización', icon: 'grid_view', desc: 'La imagen se divide en parches cuadrados fijos (ej. 16x16) que se aplanan en vectores 1D.' },
-    { num: '02', title: 'Embeddings', icon: 'pin_drop', desc: 'Se añaden vectores de posición aprendibles para retener la información espacial.' },
-    { num: '03', title: 'Procesamiento', icon: 'settings_input_component', desc: 'Normalización, Auto-Atención (MSA), MLP y conexiones residuales.', highlight: true },
-    { num: '04', title: 'Cabezal MLP', icon: 'output', desc: 'La salida del token [class] se introduce en un MLP final para la clasificación.' },
+    { num: '01', title: 'Normalizacion', icon: 'tune', desc: 'Se aplica LayerNorm antes de cualquier operación.' },
+    { num: '02', title: 'MSA', icon: 'Hub', desc: 'Se proyecta la entrada en múltiples subespacios para capturar diferentes tipos de relaciones.' },
+    { num: '03', title: 'Conexión Residual 1', icon: 'add_circle_outline', desc: 'Una suma shortcut que añade la entrada original a la salida del MSA para mitigar la degradación del gradiente.' },
+    { num: '04', title: 'Normalizacion Intermedia', icon: 'layers', desc: 'Un segundo LayerNorm prepara los datos para la transformación no lineal.' },
+    { num: '05', title: 'MLP', icon: 'psychology', desc: 'Dos capas lineales con una activación no lineal (usualmente GELU) y expansión de dimensionalidad (típicamente 4× el tamaño del embedding).', highlight: true },
+    { num: '06', title: 'Conexión Residual 2', icon: 'add_circle_outline', desc: 'La suma final que cierra el bloque, permitiendo que la red aprenda funciones de identidad si el entrenamiento lo requiere.' },
   ];
 
   return (
@@ -61,13 +63,10 @@ const SlideArchitecture: React.FC<Props> = ({ slide }) => {
           <div className="relative z-10 flex flex-col gap-8">
             <div className="flex justify-between items-center">
               <h3 className="text-xl font-bold font-display">Esquema Técnico de la Arquitectura</h3>
-              <div className="flex gap-4">
-                <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-full bg-primary"></span><span className="text-slate-400 text-xs font-bold">Parámetros Entrenables</span></div>
-                <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-full bg-slate-600"></span><span className="text-slate-400 text-xs font-bold">Funciones Fijas</span></div>
-              </div>
+              
             </div>
             <div className="w-full aspect-video bg-black/40 rounded-2xl border border-white/5 flex items-center justify-center p-8">
-               <img src="https://picsum.photos/seed/vit-arch/1200/600" className="max-w-full max-h-full object-contain opacity-80" alt="Technical Arch" />
+               <img src="https://www.juansensio.com/blog/064/vit.png" className="max-w-full max-h-full object-contain opacity-80" alt="Technical Arch" />
             </div>
           </div>
         </div>
