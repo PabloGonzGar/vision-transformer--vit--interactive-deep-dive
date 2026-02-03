@@ -1,0 +1,5 @@
+{
+  "name": "Vision Transformer (ViT) Interactive Deep Dive",
+  "description": "An educational interactive presentation platform exploring the technical evolution of computer vision from CNNs to Vision Transformers, featuring interactive charts, detailed architectural breakdowns, and AI-powered explanations.",
+  "requestFramePermissions": []
+}
