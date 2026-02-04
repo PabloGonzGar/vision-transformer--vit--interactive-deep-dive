@@ -23,10 +23,7 @@ const SlideConclusion: React.FC<Props> = ({ slide }) => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent"></div>
           <div className="absolute bottom-8 left-8 flex items-center gap-3">
-             <div className="size-10 rounded-xl bg-white/5 backdrop-blur-md flex items-center justify-center border border-white/10">
-               <span className="material-symbols-outlined text-primary text-xl">hub</span>
-             </div>
-             <span className="text-xs font-black font-mono uppercase tracking-[0.3em] text-white/80">End of Sequence</span>
+             
           </div>
         </div>
 
@@ -34,9 +31,7 @@ const SlideConclusion: React.FC<Props> = ({ slide }) => {
           {slide.title}
         </h1>
         
-        <p className="text-lg md:text-xl text-slate-400 font-medium text-center leading-relaxed mb-16 max-w-2xl">
-          {slide.subtitle} Esperamos que este "deep dive" haya iluminado el cambio de paradigma hacia mecanismos atencionales en visión por computadora.
-        </p>
+        
       </div>
     </div>
   );
