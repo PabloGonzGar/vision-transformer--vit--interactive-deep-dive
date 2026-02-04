@@ -25,9 +25,7 @@ const Header: React.FC<HeaderProps> = ({ currentSlideIndex, totalSlides, onHome 
             <a className="text-[#64748b] dark:text-gray-400 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors" href="#">Rendimiento</a>
             <a className="text-[#64748b] dark:text-gray-400 hover:text-primary dark:hover:text-white text-sm font-medium transition-colors" href="#">Ética</a>
           </nav>
-          <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-primary/90 transition-all text-white text-sm font-bold shadow-lg shadow-primary/20">
-            <span className="truncate">Download PDF</span>
-          </button>
+          
         </div>
         <div className="lg:hidden">
           <button className="p-2 text-[#111318] dark:text-white">

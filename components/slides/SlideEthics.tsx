@@ -8,10 +8,10 @@ interface Props {
 
 const SlideEthics: React.FC<Props> = ({ slide }) => {
   const cards = [
-    { icon: 'eco', title: 'Eficiencia Energética', color: 'text-green-400', img: 'https://picsum.photos/seed/green/400/300', desc: 'Optimización de huella de carbono mediante Green AI, poda y cuantización de modelos.' },
-    { icon: 'visibility', title: 'Explicabilidad (XAI)', color: 'text-orange-400', img: 'https://picsum.photos/seed/xai/400/300', desc: 'Uso de Attention Rollout para auditar qué partes de la imagen influyen en la decisión.' },
-    { icon: 'balance', title: 'Gestión de Sesgos', color: 'text-purple-400', img: 'https://picsum.photos/seed/bias/400/300', desc: 'Mitigación activa de sesgos demográficos en los datasets de entrenamiento masivos.' },
-    { icon: 'shield', title: 'Seguridad', color: 'text-blue-400', img: 'https://picsum.photos/seed/sec/400/300', desc: 'Defensa contra ataques adversarios y envenenamiento de parches en modelos críticos.' },
+    { icon: 'factory', title: 'Sostenibilidad Industrial', color: 'text-green-400', img: 'https://images.unsplash.com/photo-1750969185331-e03829f72c7d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fHJlZCUyMG5ldXJvbmFsfGVufDB8fDB8fHwy', desc: 'El alto coste de entrenamiento inicial se compensa mediante transfer learning y una inferencia hasta 4 veces más eficiente que las CNN tradicionales.' },
+    { icon: 'bolt', title: 'Eficiencia Energética', color: 'text-orange-400', img: 'https://images.unsplash.com/photo-1592659762303-90081d34b277?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpcHxlbnwwfHwwfHx8Mg%3D%3D', desc: 'Cumplimiento del marco europeo gracias a la reducción drástica de la huella computacional en el despliegue a largo plazo.' },
+    { icon: 'gavel', title: 'Gobernanza de Datos', color: 'text-purple-400', img: 'https://media.istockphoto.com/id/2191466536/es/foto/visión-de-la-tecnología-de-ia-en-diseño-abstracto-azul-y-rojo-de-alta-tecnología.webp?a=1&b=1&s=612x612&w=0&k=20&c=I_lGtidAp8ollP68c7ccFDfUvT3m_gyWDZecb-frc7s=', desc: 'Ante la falta de sesgo inductivo, la legislación exige auditorías estrictas y supervisión humana para evitar sesgos en los datasets masivos.' },
+    { icon: 'visibility', title: 'Explicabilidad Nativa', color: 'text-blue-400', img: 'https://images.unsplash.com/photo-1743106436447-6cfc59017fe1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVhdG1hcHxlbnwwfHwwfHx8Mg%3D%3D', desc: 'Los mapas de atención permiten visualizar la toma de decisiones, cumpliendo con el requisito de transparencia del AI Act para sectores de alto riesgo.' },
   ];
 
   return (
@@ -31,18 +31,8 @@ const SlideEthics: React.FC<Props> = ({ slide }) => {
             </div>
           </div>
           <p className="text-slate-400 text-lg md:text-xl leading-relaxed max-w-4xl">
-            {slide.subtitle}. Asegurar el cumplimiento con los estándares globales de transparencia y robustez es ahora una restricción de ingeniería crítica.
+            La adopción industrial de ViTs a menudo cae bajo la clasificación de Alto Riesgo en la Ley de IA de la UE, especialmente en biometría y salud. Se requiere documentación rigurosa de trazabilidad y equidad.
           </p>
-        </div>
-
-        <div className="bg-primary/5 border border-primary/20 rounded-3xl p-8 flex gap-6 items-start">
-          <span className="material-symbols-outlined text-primary text-4xl shrink-0">info</span>
-          <div>
-            <h3 className="text-xl font-bold mb-3">Clasificación de Alto Riesgo</h3>
-            <p className="text-slate-300 leading-relaxed text-base">
-              La adopción industrial de ViTs a menudo cae bajo la clasificación de <strong>Alto Riesgo</strong> en la Ley de IA de la UE, especialmente en biometría y salud. Se requiere documentación rigurosa de trazabilidad y equidad.
-            </p>
-          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
