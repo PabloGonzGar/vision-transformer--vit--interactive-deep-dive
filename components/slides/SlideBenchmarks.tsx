@@ -43,7 +43,7 @@ const SlideBenchmarks: React.FC<Props> = ({ slide }) => {
           <div className="lg:col-span-2 bg-surface-dark rounded-3xl border border-border-dark p-8 flex flex-col gap-6 shadow-2xl">
             <div className="flex justify-between items-start">
               <div>
-                <h3 className="text-xl font-bold mb-1">Precisión vs Cómputo</h3>
+                <h3 className="text-xl font-bold mb-1">Accuracy vs Cómputo</h3>
                 <p className="text-sm text-slate-500">Eficiencia de escalado en dataset JFT-300M</p>
               </div>
               <div className="flex items-center gap-2 bg-green-500/10 text-green-400 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest border border-green-500/20">
@@ -64,7 +64,7 @@ const SlideBenchmarks: React.FC<Props> = ({ slide }) => {
                   />
                   <Legend verticalAlign="top" align="right" />
                   <Line type="monotone" dataKey="vit" stroke="#135bec" strokeWidth={3} dot={{ r: 5, fill: '#135bec' }} name="ViT (Huge)" />
-                  <Line type="monotone" dataKey="resnet" stroke="#94a3b8" strokeWidth={2} strokeDasharray="5 5" dot={{ r: 4, fill: '#94a3b8' }} name="ResNet-152" />
+                  <Line type="monotone" dataKey="resnet" stroke="#94a3b8" strokeWidth={2} strokeDasharray="5 5" dot={{ r: 4, fill: '#94a3b8' }} name="ResNet" />
                 </LineChart>
               </ResponsiveContainer>
             </div>
@@ -73,7 +73,7 @@ const SlideBenchmarks: React.FC<Props> = ({ slide }) => {
           {/* Dataset Size Impact */}
           <div className="bg-surface-dark rounded-3xl border border-border-dark p-8 flex flex-col gap-6 shadow-2xl">
             <h3 className="text-xl font-bold">Impacto de Escala</h3>
-            <p className="text-sm text-slate-500">ViT requiere pre-entrenamiento masivo para superar a las CNN.</p>
+            <p className="text-sm text-slate-500">A gran escala, el ViT supera a las CNN en precisión y eficiencia, utilizando hasta 4 veces menos cómputo y optimizando el uso de memoria.</p>
             
             <div className="flex-1 w-full min-h-[250px] mt-2">
               <ResponsiveContainer width="100%" height="100%">
@@ -93,12 +93,10 @@ const SlideBenchmarks: React.FC<Props> = ({ slide }) => {
         </div>
 
         {/* Feature Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
           {[
-            { icon: 'dataset', title: 'Eficiencia de Datos', color: 'bg-blue-900/30 text-blue-400', desc: 'ViT carece de sesgos inductivos, requiriendo datos masivos para generalizar.' },
-            { icon: 'rocket_launch', title: 'Escalabilidad', color: 'bg-purple-900/30 text-purple-400', desc: 'El rendimiento escala linealmente con el cómputo y el tamaño del dataset.' },
-            { icon: 'savings', title: 'Ahorro Cómputo', color: 'bg-emerald-900/30 text-emerald-400', desc: 'Requiere 2-4x menos cómputo para lograr la misma precisión que CNNs SOTA.' },
-            { icon: 'memory', title: 'Hardware Ready', color: 'bg-orange-900/30 text-orange-400', desc: 'Optimizado naturalmente para el paralelismo masivo de TPUs y GPUs modernas.' }
+            { icon: 'dataset', title: 'Escala Pequeña', color: 'bg-blue-900/30 text-blue-400', desc: 'VEn ImageNet-1K, una ResNet suele superar al ViT, ya que este tiende al sobreajuste si no cuenta con volúmenes masivos de datos para compensar su arquitectura "genérica"' },
+            { icon: 'rocket_launch', title: 'Escalabilidad Masiva', color: 'bg-purple-900/30 text-purple-400', desc: 'EEn ImageNet-21K o JFT-300M, el ViT supera a las CNN (como EfficientNet), alcanzando precisiones de hasta el 90.45% (ViT-G)' },
           ].map((card, i) => (
             <div key={i} className="p-6 rounded-3xl bg-surface-dark border border-border-dark hover:border-primary/40 transition-colors group">
               <div className={`w-12 h-12 rounded-2xl ${card.color} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}>
